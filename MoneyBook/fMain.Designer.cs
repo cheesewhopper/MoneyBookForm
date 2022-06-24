@@ -33,6 +33,8 @@
             this.btIN = new System.Windows.Forms.ToolStripButton();
             this.btOut = new System.Windows.Forms.ToolStripButton();
             this.btLogin = new System.Windows.Forms.ToolStripButton();
+            this.BtEdit = new System.Windows.Forms.ToolStripButton();
+            this.BtDelete = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbUserName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -42,8 +44,6 @@
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -54,8 +54,8 @@
             this.btIN,
             this.btOut,
             this.btLogin,
-            this.toolStripButton1,
-            this.toolStripButton2});
+            this.BtEdit,
+            this.BtDelete});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(622, 25);
@@ -89,6 +89,24 @@
             this.btLogin.Size = new System.Drawing.Size(63, 22);
             this.btLogin.Text = "로그인";
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
+            // 
+            // BtEdit
+            // 
+            this.BtEdit.Image = ((System.Drawing.Image)(resources.GetObject("BtEdit.Image")));
+            this.BtEdit.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtEdit.Name = "BtEdit";
+            this.BtEdit.Size = new System.Drawing.Size(51, 22);
+            this.BtEdit.Text = "편집";
+            this.BtEdit.Click += new System.EventHandler(this.BtEdit_Click);
+            // 
+            // BtDelete
+            // 
+            this.BtDelete.Image = ((System.Drawing.Image)(resources.GetObject("BtDelete.Image")));
+            this.BtDelete.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BtDelete.Name = "BtDelete";
+            this.BtDelete.Size = new System.Drawing.Size(51, 22);
+            this.BtDelete.Text = "삭제";
+            this.BtDelete.Click += new System.EventHandler(this.BtDelete_Click);
             // 
             // statusStrip1
             // 
@@ -125,6 +143,7 @@
             this.lv1.FullRowSelect = true;
             this.lv1.GridLines = true;
             this.lv1.Location = new System.Drawing.Point(0, 25);
+            this.lv1.MultiSelect = false;
             this.lv1.Name = "lv1";
             this.lv1.Size = new System.Drawing.Size(622, 415);
             this.lv1.TabIndex = 2;
@@ -155,22 +174,6 @@
             // 
             this.columnHeader5.Text = "비고";
             this.columnHeader5.Width = 90;
-            // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(51, 22);
-            this.toolStripButton1.Text = "편집";
-            // 
-            // toolStripButton2
-            // 
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(51, 22);
-            this.toolStripButton2.Text = "삭제";
             // 
             // fMain
             // 
@@ -207,7 +210,7 @@
         private ColumnHeader columnHeader3;
         private ColumnHeader columnHeader4;
         private ColumnHeader columnHeader5;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
+        private ToolStripButton BtEdit;
+        private ToolStripButton BtDelete;
     }
 }

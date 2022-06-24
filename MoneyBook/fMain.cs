@@ -82,5 +82,29 @@ namespace MoneyBook
 
             }
         }
+
+        private void BtEdit_Click(object sender, EventArgs e)
+        {
+            //편집메뉴
+            if(lv1.SelectedItems.Count <1)
+            {
+                MessageBox.Show("테이블을 선택하세요");
+                return;
+            }
+
+            //선택된 자료의 구분을 확인한다.
+            ListViewItem lv =lv1.SelectedItems[0];
+
+        }
+
+        private void BtDelete_Click(object sender, EventArgs e)
+        {
+            //삭제메뉴
+            if (lv1.SelectedItems.Count < 1)
+            {
+                MessageBox.Show("테이블을 선택하세요");
+                return;
+            }
+        }
     }
 }
