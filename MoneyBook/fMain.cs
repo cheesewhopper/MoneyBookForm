@@ -94,6 +94,21 @@ namespace MoneyBook
 
             //선택된 자료의 구분을 확인한다.
             ListViewItem lv =lv1.SelectedItems[0];
+            string 입금액 = lv.SubItems[1].Text;
+            string 출금액 = lv.SubItems[2].Text;
+            if(입금액 !="")
+            {
+                //입금화면을 호출하고 현재 데이터를 전송
+                fIN f = new fIN();
+                f.ShowDialog();
+            }
+            else
+            {
+                //출금화면을 호출하고...
+                fOut f = new fOut();
+                f.ShowDialog();
+
+            }
 
         }
 
