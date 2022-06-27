@@ -17,6 +17,15 @@ namespace MoneyBook
             InitializeComponent();
         }
 
+        public fOut(string 날짜, string 분류, string 금액, string 비고)
+        {
+            InitializeComponent();
+            dtDate.Value = DateTime.Parse(날짜);
+            tbType.Text = 분류;
+            tbAmt.Text = 금액;
+            tbMemo.Text = 비고;
+        }
+
         private void fIN_Load(object sender, EventArgs e)
         {
 

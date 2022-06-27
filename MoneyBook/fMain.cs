@@ -94,19 +94,41 @@ namespace MoneyBook
 
             //선택된 자료의 구분을 확인한다.
             ListViewItem lv =lv1.SelectedItems[0];
-            string 입금액 = lv.SubItems[1].Text;
-            string 출금액 = lv.SubItems[2].Text;
-            if(입금액 !="")
+            string 날짜 = lv.SubItems[0].Text;
+            string 분류 = lv.SubItems[1].Text;
+            string 입금액 = lv.SubItems[2].Text;
+            string 출금액 = lv.SubItems[3].Text;
+            string 비고 = lv.SubItems[4].Text;
+
+
+            if (입금액 !="")
             {
                 //입금화면을 호출하고 현재 데이터를 전송
-                fIN f = new fIN();
-                f.ShowDialog();
+                fIN f = new fIN(날짜, 분류, 입금액,비고);
+                if(f.ShowDialog()== System.Windows.Forms.DialogResult.OK)
+                {
+                    //현재 선택된 자료를 업데이트 합니다.
+                    lv.SubItems[0].Text = f.dtDate.Value.ToShortDateString(); //2022-12-31
+                    lv.SubItems[1].Text = f.tbType.Text;
+                    lv.SubItems[2].Text = f.tbAmt.Text;
+                    lv.SubItems[3].Text = "";
+                    lv.SubItems[4].Text = f.tbMemo.Text;
+                }
             }
             else
             {
                 //출금화면을 호출하고...
-                fOut f = new fOut();
-                f.ShowDialog();
+                fOut f = new fOut(날짜, 분류, 입금액, 비고);
+                if (f.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    //현재 선택된 자료를 업데이트 합니다.
+                    lv.SubItems[0].Text = f.dtDate.Value.ToShortDateString(); //2022-12-31
+                    lv.SubItems[1].Text = f.tbType.Text;
+                    lv.SubItems[2].Text = f.tbAmt.Text;
+                    lv.SubItems[3].Text = "";
+                    lv.SubItems[4].Text = f.tbMemo.Text;
+
+                }
 
             }
 
