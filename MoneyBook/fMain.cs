@@ -142,6 +142,14 @@ namespace MoneyBook
                 MessageBox.Show("테이블을 선택하세요");
                 return;
             }
+
+            DialogResult result = MessageBox.Show("삭제하시겠습니다까?", "삭제확인", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(result == System.Windows.Forms.DialogResult.Yes)
+            {
+                ListViewItem lv = lv1.SelectedItems[0];
+                lv1.Items.Remove(lv);
+                MessageBox.Show("삭제완료"); 
+            }
         }
     }
 }
