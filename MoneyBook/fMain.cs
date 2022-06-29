@@ -156,8 +156,15 @@ namespace MoneyBook
         {
             //저장하기
             //날짜, 분류, 입금, 출금, 비고
-            string 파일명 = AppDomain.CurrentDomain.BaseDirectory + "Data\\2018-12.csv";
+            string 저장폴더 = AppDomain.CurrentDomain.BaseDirectory + "Data"; 
+            string 파일명 = 저장폴더 + "\\2018-12.csv";
             string 내용 = "";
+
+            if (System.IO.Directory.Exists(저장폴더) == false)
+               {
+                System.IO.Directory.CreateDirectory(저장폴더);
+            //3-9분
+            }
 
             System.IO.File.WriteAllText(파일명, 내용);
             Console.WriteLine("저장파일명=" + 파일명);
