@@ -35,6 +35,9 @@
             this.btLogin = new System.Windows.Forms.ToolStripButton();
             this.BtEdit = new System.Windows.Forms.ToolStripButton();
             this.BtDelete = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.btSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.btLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.sbUserName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -44,9 +47,6 @@
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
-            this.btSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.btLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -111,6 +111,31 @@
             this.BtDelete.Size = new System.Drawing.Size(51, 22);
             this.BtDelete.Text = "삭제";
             this.BtDelete.Click += new System.EventHandler(this.BtDelete_Click);
+            // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btSave,
+            this.btLoad});
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(89, 22);
+            this.toolStripSplitButton1.Text = "testMenu";
+            // 
+            // btSave
+            // 
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(180, 22);
+            this.btSave.Text = "저장하기";
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
+            // 
+            // btLoad
+            // 
+            this.btLoad.Name = "btLoad";
+            this.btLoad.Size = new System.Drawing.Size(180, 22);
+            this.btLoad.Text = "불러오기";
+            this.btLoad.Click += new System.EventHandler(this.btLoad_Click);
             // 
             // statusStrip1
             // 
@@ -178,29 +203,6 @@
             // 
             this.columnHeader5.Text = "비고";
             this.columnHeader5.Width = 90;
-            // 
-            // toolStripSplitButton1
-            // 
-            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btSave,
-            this.btLoad});
-            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
-            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
-            this.toolStripSplitButton1.Size = new System.Drawing.Size(89, 22);
-            this.toolStripSplitButton1.Text = "testMenu";
-            // 
-            // btSave
-            // 
-            this.btSave.Name = "btSave";
-            this.btSave.Size = new System.Drawing.Size(180, 22);
-            this.btSave.Text = "저장하기";
-            // 
-            // btLoad
-            // 
-            this.btLoad.Name = "btLoad";
-            this.btLoad.Size = new System.Drawing.Size(180, 22);
-            this.btLoad.Text = "불러오기";
             // 
             // fMain
             // 

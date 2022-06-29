@@ -151,5 +151,22 @@ namespace MoneyBook
                 MessageBox.Show("삭제완료"); 
             }
         }
+
+        private void btSave_Click(object sender, EventArgs e)
+        {
+            //저장하기
+            //날짜, 분류, 입금, 출금, 비고
+            string 파일명 = AppDomain.CurrentDomain.BaseDirectory + "Data\\2018-12.csv";
+            string 내용 = "";
+
+            System.IO.File.WriteAllText(파일명, 내용);
+            Console.WriteLine("저장파일명=" + 파일명);
+        }
+
+        private void btLoad_Click(object sender, EventArgs e)
+        {
+            //불러오기
+            //
+        }
     }
 }
