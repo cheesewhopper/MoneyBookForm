@@ -44,6 +44,9 @@
             this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
             this.columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
+            this.btSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.btLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -55,7 +58,8 @@
             this.btOut,
             this.btLogin,
             this.BtEdit,
-            this.BtDelete});
+            this.BtDelete,
+            this.toolStripSplitButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(622, 25);
@@ -175,6 +179,29 @@
             this.columnHeader5.Text = "비고";
             this.columnHeader5.Width = 90;
             // 
+            // toolStripSplitButton1
+            // 
+            this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btSave,
+            this.btLoad});
+            this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
+            this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripSplitButton1.Name = "toolStripSplitButton1";
+            this.toolStripSplitButton1.Size = new System.Drawing.Size(89, 22);
+            this.toolStripSplitButton1.Text = "testMenu";
+            // 
+            // btSave
+            // 
+            this.btSave.Name = "btSave";
+            this.btSave.Size = new System.Drawing.Size(180, 22);
+            this.btSave.Text = "저장하기";
+            // 
+            // btLoad
+            // 
+            this.btLoad.Name = "btLoad";
+            this.btLoad.Size = new System.Drawing.Size(180, 22);
+            this.btLoad.Text = "불러오기";
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -212,5 +239,8 @@
         private ColumnHeader columnHeader5;
         private ToolStripButton BtEdit;
         private ToolStripButton BtDelete;
+        private ToolStripSplitButton toolStripSplitButton1;
+        private ToolStripMenuItem btSave;
+        private ToolStripMenuItem btLoad;
     }
 }
