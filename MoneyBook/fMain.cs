@@ -169,6 +169,7 @@ namespace MoneyBook
             System.IO.File.WriteAllText(파일명, 내용);
             Console.WriteLine("저장파일명=" + 파일명);
             // 파일 명은 콘솔로 저장
+            //2보 전진을 위한 1보 후퇴
         }
 
         private void btLoad_Click(object sender, EventArgs e)
